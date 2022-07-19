@@ -1,0 +1,174 @@
+@use 'variables';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 100vh;
+}
+
+@media (max-width:768px) {
+    main {
+        height: 100vh;
+        grid-template-areas: "daniel"
+                     "daniel"
+                     "jonathan"
+                     "jeanette"
+                     "patrick"
+                     "patrick"
+                     "kira";
+    }
+    .card{
+        width: 100%;
+      }
+      .card:nth-of-type(1){
+        height: 400px;
+        width: 100%;
+      }
+      .card:nth-of-type(2){
+        height: 300px;
+        width: 100%;
+      }
+      
+}
+
+@media (min-width:768px) {
+    main{
+        grid-template-areas: "daniel daniel jonathan kira"
+                     "jeanette patrick patrick kira";
+    }
+    .card:nth-of-type(2){ 
+        max-width: 280px;
+    }
+    
+}
+
+main{
+    display: grid;
+    max-width: 70%;
+    align-items: center;
+    max-height: 100%;
+    font-family: variables.$font;
+    
+    .person-img {
+        border-radius: 30px;
+    }
+    .card{
+        border-radius: 10px;
+        padding: 2em;
+        box-shadow: 1px 1px variables.$lightGray;
+        margin: 1rem;
+        .name-grad {
+            display: flex;
+            flex-direction: column;
+            margin-left: 0.8rem;
+        }
+        .info-container{
+            display: flex;
+            align-items: center;
+            
+        }
+        .offer {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+        .description{
+            margin-top: 1rem;
+        }
+        
+    }
+    .card:nth-of-type(1) {
+        background-color: variables.$moderateViolet;
+        color: variables.$white;
+        grid-area: daniel;
+        max-width: auto;
+
+        .graduate {
+            color: variables.$whitefiftyopacity;
+        }
+        .description {
+            color: variables.$whiteseventyopacity;
+        }
+        .info-container {
+            background-image: url('images/bg-pattern-quotation.svg');
+            background-repeat: no-repeat;
+            background-position:right 25% top ;
+           
+        }
+       
+    }
+
+    .card:nth-of-type(2) {
+        background-color: variables.$darkGrayishBlue;
+        grid-area: jonathan;
+        
+        
+       
+        .graduate {
+            color: variables.$whitefiftyopacity;
+        }
+        .description {
+            color: variables.$whiteseventyopacity;
+        }
+        .offer{
+            color: variables.$white;
+        }
+        .name{
+            color: variables.$white;
+        }
+    }
+    .card:nth-of-type(3) {
+        background-color: variables.$white;
+        grid-area: jeanette;
+        max-width: 250px;
+        
+        .graduate {
+            color: variables.$darkBlackishBluefiftyOpacity;
+        }
+        .description {
+            color: variables.$darkBlackishBluefiftyOpacity;
+        }
+    }
+    .card:nth-of-type(4) {
+        background-color: variables.$darkBlackishBlue;
+        grid-area: patrick;
+        
+    
+        .offer,.name {
+            color: variables.$white;
+        }
+        .description {
+            color: variables.$whiteseventyopacity;
+        }
+        .graduate {
+            color: variables.$whitefiftyopacity;
+        }
+    }
+    .card:nth-of-type(5) {
+        background-color: variables.$white;
+        grid-area: kira;
+        max-width: 280px;
+      
+        .graduate {
+            color: variables.$darkBlackishBluefiftyOpacity;
+        }
+        .name {
+            color: variables.$darkBlackishBlue;
+        }
+        .description {
+            color: variables.$darkBlackishBluefiftyOpacity;
+        }
+    }
+}
+
+
+
