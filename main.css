@@ -22,12 +22,15 @@ body {
     width: 100%;
   }
   .card:nth-of-type(1) {
-    height: 400px;
+    min-height: 400px;
     width: 100%;
   }
   .card:nth-of-type(2) {
-    height: 300px;
+    min-height: 300px;
     width: 100%;
+  }
+  .card:nth-of-type(5), .card:nth-of-type(4) {
+    max-width: 100%;
   }
 }
 @media (min-width: 768px) {
@@ -36,6 +39,14 @@ body {
   }
   .card:nth-of-type(2) {
     max-width: 280px;
+  }
+  .card:nth-of-type(5) {
+    max-width: 70%;
+    min-height: 90%;
+  }
+  .card:nth-of-type(4) {
+    height: auto;
+    width: auto;
   }
 }
 main {
@@ -75,7 +86,9 @@ main .card:nth-of-type(1) {
   background-color: hsl(263deg, 55%, 52%);
   color: hsl(0deg, 0%, 100%);
   grid-area: daniel;
-  max-width: auto;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
 }
 main .card:nth-of-type(1) .graduate {
   color: hsla(0deg, 0%, 100%, 0.5);
@@ -107,7 +120,8 @@ main .card:nth-of-type(2) .name {
 main .card:nth-of-type(3) {
   background-color: hsl(0deg, 0%, 100%);
   grid-area: jeanette;
-  max-width: 250px;
+  max-width: auto;
+  height: 100%;
 }
 main .card:nth-of-type(3) .graduate {
   color: hsla(219deg, 29%, 14%, 0.5);
@@ -131,7 +145,6 @@ main .card:nth-of-type(4) .graduate {
 main .card:nth-of-type(5) {
   background-color: hsl(0deg, 0%, 100%);
   grid-area: kira;
-  max-width: 280px;
 }
 main .card:nth-of-type(5) .graduate {
   color: hsla(219deg, 29%, 14%, 0.5);

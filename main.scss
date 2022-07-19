@@ -30,13 +30,16 @@ body{
         width: 100%;
       }
       .card:nth-of-type(1){
-        height: 400px;
+        min-height: 400px;
         width: 100%;
       }
       .card:nth-of-type(2){
-        height: 300px;
+        min-height: 300px;
         width: 100%;
       }
+      .card:nth-of-type(5),.card:nth-of-type(4){
+        max-width: 100%;
+    }
       
 }
 
@@ -48,7 +51,14 @@ body{
     .card:nth-of-type(2){ 
         max-width: 280px;
     }
-    
+    .card:nth-of-type(5){
+        max-width: 70%;
+        min-height: 90%;
+    }
+    .card:nth-of-type(4) { 
+        height: auto;
+        width: auto;
+    }
 }
 
 main{
@@ -90,7 +100,7 @@ main{
         background-color: variables.$moderateViolet;
         color: variables.$white;
         grid-area: daniel;
-        max-width: auto;
+        max-width: max-content;
 
         .graduate {
             color: variables.$whitefiftyopacity;
@@ -110,9 +120,7 @@ main{
     .card:nth-of-type(2) {
         background-color: variables.$darkGrayishBlue;
         grid-area: jonathan;
-        
-        
-       
+    
         .graduate {
             color: variables.$whitefiftyopacity;
         }
@@ -129,8 +137,8 @@ main{
     .card:nth-of-type(3) {
         background-color: variables.$white;
         grid-area: jeanette;
-        max-width: 250px;
-        
+        max-width: auto;
+        height: 100%;
         .graduate {
             color: variables.$darkBlackishBluefiftyOpacity;
         }
@@ -141,8 +149,6 @@ main{
     .card:nth-of-type(4) {
         background-color: variables.$darkBlackishBlue;
         grid-area: patrick;
-        
-    
         .offer,.name {
             color: variables.$white;
         }
@@ -156,7 +162,7 @@ main{
     .card:nth-of-type(5) {
         background-color: variables.$white;
         grid-area: kira;
-        max-width: 280px;
+        
       
         .graduate {
             color: variables.$darkBlackishBluefiftyOpacity;
