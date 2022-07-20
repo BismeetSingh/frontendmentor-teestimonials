@@ -87,12 +87,15 @@ main .person-img {
     color: variables.$whiteseventyopacity;
 }
 
-.card:nth-of-type(1)   .info-container {
+.card:nth-of-type(1)  {
     background-image: url('images/bg-pattern-quotation.svg');
     background-repeat: no-repeat;
-    background-position:right 25% top ;
+    background-position:right 25% top 0%;
+    background-size: 21% auto;
+    
    
 }
+
 
 //Card two
 
@@ -181,7 +184,7 @@ main .person-img {
     color: variables.$darkBlackishBluefiftyOpacity;
 }
 
-@media (min-width:768px) {
+@media (min-width:1300px){
     main{
         grid-template-areas: "daniel daniel jonathan kira"
                      "jeanette patrick patrick kira";
@@ -190,7 +193,7 @@ main .person-img {
     }
     .card:nth-of-type(1){
         min-width: min-content;
-        min-height: 22rem;
+        min-height: 15rem;
     }
     .card:nth-of-type(2){ 
         min-width: 0.8rem;
@@ -206,17 +209,17 @@ main .person-img {
     }
     .card:nth-of-type(5){ 
         min-width: 2.5rem;
-        min-height: 22rem+5rem; //Referring to heights of first and second rows.
+        min-height: 15rem+5rem; //Referring to heights of first and second rows.
     }
    
 }
 
 
-// @media (max-width:1300px) {
-//     main{
-//         grid-template-areas: "daniel jonathan"
-//                             "jeanette patrick"
-//                             "kira jeanette";
+@media (min-width:768px) and (max-width:1300px) {
+    main{
+        grid-template-areas: "daniel jonathan"
+                            "jeanette patrick"
+                            "kira jeanette";
 
-// }
-// }
+}
+}
