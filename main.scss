@@ -80,6 +80,7 @@ main .person-img {
 
 .card:nth-of-type(1) .graduate {
     color: variables.$whitefiftyopacity;
+    
 }
 
 .card:nth-of-type(1) .description {
@@ -128,6 +129,10 @@ main .person-img {
     color: variables.$darkBlackishBluefiftyOpacity;
 }
 
+.card:nth-of-type(3) .name {
+    color: variables.$darkBlackishBlue;
+}
+
 .card:nth-of-type(3)  .description {
     color: variables.$darkBlackishBluefiftyOpacity;
 }
@@ -140,7 +145,11 @@ main .person-img {
     
 }
 
-.card:nth-of-type(4) .offer,.name {
+.card:nth-of-type(4)  .name {
+    color: variables.$white;
+}
+
+.card:nth-of-type(4)  .offer {
     color: variables.$white;
 }
 
